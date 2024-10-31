@@ -29,10 +29,12 @@ function App() {
     })();
   }, []);
 
+  const randomOrder = data.toSorted((a,b) => 0.5 - Math.random())
+
   return (
   <>
   <h1>{`Score: ${currentScore} High Score: ${highScore}`}</h1>
-  {data.map((character) => (
+  {randomOrder.map((character) => (
     <Card
       charactrData={character}
       alreadyClicked={alreadyClicked}
