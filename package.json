@@ -1,6 +1,5 @@
 {
-  "name": "my-first-react-app",
-  "private": true,
+  "name": "odin-memory-cad",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
