@@ -1,12 +1,18 @@
 import { useEffect, useState } from "react";
+import Card from "./components/card";
 import "./index.css";
 
 function App() {
   const [data, setData] = useState([{ name: "DATA NOT FOUND" }]);
+  const [alreadyClicked, setAlreadyClicked] = useState([]);
+  const [currentScore, setCurrentScore] = useState(0);
+  const [highScore, setHighScore] = useState(0);
 
   useEffect(() => {
     (async () => {
-      const response = await fetch("https://rawcdn.githack.com/akabab/starwars-api/0.2.1/api/all.json");
+      const response = await fetch(
+        "https://rawcdn.githack.com/akabab/starwars-api/0.2.1/api/all.json"
+      );
       const data = await response.json();
       setData([
         data[0],
@@ -23,16 +29,21 @@ function App() {
     })();
   }, []);
 
-  return data.map((character) => {
-    return (
-      <div id={character.id}>
-        <p>
-          {data.indexOf(character) + 1} {character.name}
-        </p>
-        <img src={character.image} alt={character.name} />
-      </div>
-    );
-  });
+  return (
+  <>
+  <h1>{`Score: ${currentScore} High Score: ${highScore}`}</h1>
+  {data.map((character) => (
+    <Card
+      charactrData={character}
+      alreadyClicked={alreadyClicked}
+      setAlreadyClicked={setAlreadyClicked}
+      score={currentScore}
+      setScore={setCurrentScore}
+      highScore={highScore}
+      setHighScore={setHighScore}
+    />
+  ))}
+  </>)
 }
 
 export default App;
