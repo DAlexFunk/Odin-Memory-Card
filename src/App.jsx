@@ -10,9 +10,7 @@ function App() {
 
   useEffect(() => {
     (async () => {
-      const response = await fetch(
-        "https://rawcdn.githack.com/akabab/starwars-api/0.2.1/api/all.json"
-      );
+      const response = await fetch("https://rawcdn.githack.com/akabab/starwars-api/0.2.1/api/all.json");
       const data = await response.json();
       setData([
         data[0],
@@ -29,23 +27,26 @@ function App() {
     })();
   }, []);
 
-  const randomOrder = data.toSorted((a,b) => 0.5 - Math.random())
+  const randomOrder = data.toSorted((a, b) => 0.5 - Math.random());
 
   return (
-  <>
-  <h1>{`Score: ${currentScore} High Score: ${highScore}`}</h1>
-  {randomOrder.map((character) => (
-    <Card
-      charactrData={character}
-      alreadyClicked={alreadyClicked}
-      setAlreadyClicked={setAlreadyClicked}
-      score={currentScore}
-      setScore={setCurrentScore}
-      highScore={highScore}
-      setHighScore={setHighScore}
-    />
-  ))}
-  </>)
+    <>
+      <h1>{`Score: ${currentScore} }{ High Score: ${highScore}`}</h1>
+      <div className="cards">
+        {randomOrder.map((character) => (
+          <Card
+            charactrData={character}
+            alreadyClicked={alreadyClicked}
+            setAlreadyClicked={setAlreadyClicked}
+            score={currentScore}
+            setScore={setCurrentScore}
+            highScore={highScore}
+            setHighScore={setHighScore}
+          />
+        ))}
+      </div>
+    </>
+  );
 }
 
 export default App;

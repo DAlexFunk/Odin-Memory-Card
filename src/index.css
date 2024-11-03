@@ -1,5 +1,45 @@
-img {
-  height: 200px;
-  width: 200px;
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Tiny5&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("https://media.sketchfab.com/models/a0dcc01e19b24903a7a7fb00684eed8f/thumbnails/596d29f6a257433b83e58feb82c2bb26/88a5f322ddc4431c8f229d394c0ac8c7.jpeg");
+  background-size: cover;
+  background-position: center;
+  font-family: "Tiny5", monospace, sans-serif;
+}
+
+h1 {
+  background-color: white;
+  text-align: center;
+  font-size: 66px;
+}
+
+div.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+
+  padding: 8px;
+}
+
+img.card {
+  height: 100%;
+  width: 100%;
   object-fit: contain;
+  animation: appear 1s cubic-bezier(0.26, 0.13, 0.43, 1.29);
+}
+
+@keyframes appear {
+  from {
+    transform: scale(0.1);
+  }
+
+  to {
+    transform: scale(1);
+  }
 }
