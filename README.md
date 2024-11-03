@@ -5,6 +5,7 @@ The Memory Card project from The Odin Project
 This is the Memory Card project from The Odin Project. The purpose of this project is to practice using React, specifically using effects.
 
 ## Use
+* The page can be found [here](https://dalexfunk-memory-card.netlify.app/)
 * Click on images to add to your score.
 * If you click on an image you have already clicked on your score resets to 0.
 * Try and get the max score of 10.
