@@ -1,8 +1,14 @@
-# React + Vite
+# Odin-Memory-Card
+The Memory Card project from The Odin Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+This is the Memory Card project from The Odin Project. The purpose of this project is to practice using React, specifically using effects.
 
-Currently, two official plugins are available:
+## Use
+* Click on images to add to your score.
+* If you click on an image you have already clicked on your score resets to 0.
+* Try and get the max score of 10.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Credits
+* [The Odin Project](https://www.theodinproject.com) for providing the description to the project as well as the skills necessary.
+* [Ellin](https://sketchfab.com/ElinHohler) on [Sketchfab](https://sketchfab.com/3d-models/jedi-council-baked-a0dcc01e19b24903a7a7fb00684eed8f) for making the 3d model that was used for the background.
